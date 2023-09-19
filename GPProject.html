@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Example</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        /* Center the canvas element horizontally and vertically */
+        #myPieChartContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set a fixed height for the container (adjust as needed) */
+        }
+        /* Set a fixed width and height for the canvas (adjust as needed) */
+        #myPieChart {
+            width: 50px;
+            height: 50px;
+        }
+        .center-container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="icon" href="https://www.google.com/search?q=radish+clipart+png&tbm=isch&ved=2ahUKEwjPw4vr_rWBAxVdbmwGHctMCpUQ2-cCegQIABAA&oq=radish+clipart+png&gs_lcp=CgNpbWcQAzIFCAAQgAQ6BwgAEIoFEEM6BggAEAcQHjoECAAQHjoGCAAQBRAeOgYIABAIEB5QmwVY7hBg7BNoAHAAeACAAX2IAdEEkgEDMC41mAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=LDgJZc_9Fd3cseMPy5mpqAk&bih=691&biw=1304&safe=active&ssui=on#imgrc=9V-4YvGjVoPrHM" type="image/png">
+</head>
+<body>
+    <h1>Health and Disease</h1>
+
+    <!-- Create a container for the canvas element and center it -->
+    <div id="myPieChartContainer">
+        <canvas id="myPieChart"></canvas>
+    </div>
+
+    <script>
+        // Get the canvas element
+        var ctx = document.getElementById('myPieChart').getContext('2d');
+
+        // Define data for the pie chart
+        var data = {
+            labels: ['Label 1', 'Label 2', 'Label 3'],
+            datasets: [{
+                data: [70, 20, 10], // Values for each slice
+                backgroundColor: ['red', 'blue', 'green'], // Colors for each slice
+            }]
+        };
+
+        // Create the pie chart
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+        });
+    </script>
+</body>
+</html>
